@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@media screen and (max-width: 720px) {
+  .container .container-pina {
+    grid-area: 8/6/10/7;
+    overflow: hidden;
+  }
+  .container .container-pina > img {
+    width: 200px;
+  }
+  .container .container-cuadrado-fondo-pina {
+    grid-area: 8/6/9/7;
+  }
+  .container .container-radio > img {
+    width: 145px;
+    align-self: end;
+    justify-self: center;
+    margin-top: 40px;
+  }
+  .container .container-hoja-inferior > img {
+    width: 200px;
+  }
+  .container .container-hoja-sup-izq > img {
+    width: 150px;
+  }
+  .container .container-hoja-sup-der {
+    grid-area: 1/8/4/11;
+    justify-self: end;
+  }
+  .container .container-hoja-sup-der > img {
+    width: 150px;
+  }
+  .container .container-title {
+    margin-top: 40px;
+  }
+  .container .container-title > .title-2 {
+    color: pink;
+    font-size: 3.3rem;
+    line-height: 50px;
+  }
+  .container .container-title > .title-1 {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  padding: 0;
+  font-family: "Anton", sans-serif;
+  background-image: linear-gradient(0deg, #ffffff 0%, #fafafa 60%, #cccccc 100%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(50px, 1fr));
+  grid-template-rows: repeat(10, 1fr);
+  height: 100%;
+  width: 100%;
+}
+
+.container-hoja-sup-izq {
+  grid-area: 1/1/4/3;
+}
+
+.container-hoja-sup-izq > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.container-hoja-sup-izq > img:hover {
+  width: 101%;
+}
+
+.container-nube {
+  grid-area: 1/3/5/9;
+  background-color: transparent;
+  display: flex;
+}
+
+.container-nube > img {
+  width: 100%;
+  height: auto;
+  justify-self: start;
+  align-self: start;
+  opacity: 40%;
+  object-fit: cover;
+}
+
+.container-nube > img:hover {
+  opacity: 100%;
+}
+
+.container-hoja-inferior {
+  grid-area: 9/5/11/7;
+  align-self: end;
+}
+
+.container-hoja-inferior > img {
+  width: 200px;
+  object-fit: cover;
+  margin-bottom: -3px;
+}
+
+.container-hoja-sup-der {
+  grid-area: 1/9/4/11;
+}
+
+.container-hoja-sup-der > img {
+  width: 100%;
+  height: auto;
+}
+
+.container-radio {
+  grid-area: 5/3/7/5;
+  display: flex;
+  align-self: center;
+  justify-self: start;
+}
+
+.container-radio > img {
+  width: 200px;
+  transform: rotate(-10deg);
+  object-fit: cover;
+}
+
+.container-pina {
+  grid-area: 8/7/10/7;
+  z-index: 5;
+  grid: flex;
+  justify-self: start;
+  align-self: end;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.container-pina > img {
+  width: 250px;
+  object-fit: cover;
+}
+
+.container-title {
+  grid-area: 3/5/6/7;
+  z-index: 5;
+  display: block;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.container-title > .title-1 {
+  color: #3b3b3b;
+  font-size: 3.8rem;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.container-title > .title-1 span::after {
+  content: "mal";
+  text-decoration: line-through;
+}
+
+.container-title > .title-1:hover {
+  color: #DF263D;
+  text-decoration: none;
+}
+.container-title > .title-1:hover span::after {
+  content: "buen";
+  text-decoration: none;
+}
+
+.container-title > .title-2 {
+  color: #F0930D;
+  font-size: 3.8rem;
+  letter-spacing: 0.08em;
+  line-height: 65px;
+  text-transform: uppercase;
+  font-style: italic;
+  margin: 5px;
+  padding: 0px 0;
+  text-align: left;
+}
+
+.container-rectangulo-1 {
+  grid-area: 3/1/11/1;
+  background: transparent;
+  border-right: 2px solid #568725;
+  border-top: 2px solid #568725;
+}
+
+.container-rectangulo-2 {
+  grid-area: 10/1/11/6;
+  background: transparent;
+  border-top: 2px solid #0F480B;
+  border-right: 2px solid #0F480B;
+}
+
+.container-rectangulo-3 {
+  grid-area: 1/7/2/11;
+  background: transparent;
+  border-bottom: 2px solid #F0930D;
+  border-left: 2px solid #F0930D;
+}
+
+.container-rectangulo-4 {
+  grid-area: 1/10/8/11;
+  background: transparent;
+  border-bottom: 2px solid #F0930D;
+  border-left: 2px solid #F0930D;
+}
+
+.container-cuadrado-1 {
+  grid-area: 9/2/10/3;
+  background-image: linear-gradient(27deg, #0f480b 0%, transparent 100%);
+}
+
+.container-cuadrado-2 {
+  grid-area: 2/9/3/10;
+  background-image: linear-gradient(43deg, transparent 0%, #f0930d 100%);
+}
+
+.container-cuadrado-fondo-pina {
+  grid-area: 8/7/9/8;
+  background-image: linear-gradient(90deg, #DF263D 0%, transparent 50%);
+}
+
+.container-cuadrado-fondo-radio {
+  grid-area: 6/3/7/4;
+  background-image: linear-gradient(90deg, #9FD2DC 0%, transparent 50%);
+}
+
+/*# sourceMappingURL=style.css.map */
